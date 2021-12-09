@@ -15,49 +15,36 @@ Resources:
         arn:aws:iam::111365482541:role/QnABot-FulfillmentLambdaRole-1HXJMYD3RH88Z
       Environment:
         Variables:
-          ExamplePYTHONLambdaNext: >-
-            arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RWY-ExamplePYTHONLambdaNext-wMDhPe8AMWAF
           ES_INDEX: qnabot
-          ExamplePYTHONLambdaConnectCallback: >-
-            arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RW-ExamplePYTHONLambdaConne-VUXNFdcssrEe
-          QNAYesNoExit: 'LexV2::7IU5V8EIZ7/3H2RUA4FIR/en_US'
           ES_ADDRESS: >-
             search-qnabot-elastic-f3dwyusa2r2c-kouefjaiwfvz77l6z2w2462wr4.us-west-2.es.amazonaws.com
+          ES_TYPE: qna
+          ES_SERVICE_QID: QnABot-ESQidLambda-LBsZkAG7mUKf
+          ES_SERVICE_PROXY: QnABot-ESProxyLambda-Jd5EREpKJTZg
+          DYNAMODB_USERSTABLE: QnABot-UsersTable-LFYZ44M5JAP7
+          QNAYesNoExit: 'LexV2::7IU5V8EIZ7/3H2RUA4FIR/en_US'
           QNAMonthNoConfirm: 'LexV2::DR8O0GCQMA/JYVXB8BIUH/en_US'
           QNADayOfWeek: 'LexV2::G7T2IMRUIC/0VFRUVJLV8/en_US'
-          ExamplePYTHONLambdaPrevious: >-
-            arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RW-ExamplePYTHONLambdaPrevi-pjweccqfJGZR
           QNAYesNo: 'LexV2::0YUNYYGTRG/DLF9XCWD7R/en_US'
-          ExamplePYTHONLambdahello: >-
-            arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RW-ExamplePYTHONLambdahello-EtNhmfuQYzTx
-          ES_TYPE: qna
           QNAPhoneNumberNoConfirm: 'LexV2::66BE3P6N3Z/JAGSVZY3GI/en_US'
-          QNAWage: 'LexV2::FTON44D0XV/NVRVGSN7QD/en_US'
           LAMBDA_LOG: QnABot-ESLoggingLambda-SsJGpZ6h4dBe
           QNANumber: 'LexV2::1PBJQW8G9D/F6ZDMPUDEW/en_US'
           QNADateNoConfirm: 'LexV2::SDPPQHI4K6/UTHT0C1REW/en_US'
           QNAPinNoConfirm: 'LexV2::RA4HNPPNJZ/JQ6XGPHKTD/en_US'
           QNAName: 'LexV2::HYZ1DOQHZG/E3G5HQPXVG/en_US'
           DEFAULT_SETTINGS_PARAM: CFN-DefaultQnABotSettings-9MSE6hOobv7c
-          ExampleJSLambdaQuiz: >-
-            arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RWY4QGF-ExampleJSLambdaQuiz-4g3SfoS3Melg
           DEFAULT_USER_POOL_JWKS_PARAM: CFN-DefaultUserPoolJwksUrl-RqeWJMZ9tCMC
           QNASocialSecurity: 'LexV2::FOPKMINCMX/BCS8IWYO86/en_US'
           QNAPin: 'LexV2::RTI94QVNGF/OYSSGTEAVL/en_US'
-          ES_SERVICE_QID: QnABot-ESQidLambda-LBsZkAG7mUKf
           QNATime: 'LexV2::7V6KVZQ4NA/DI5JUVYKDQ/en_US'
           ExamplePYTHONLambdaFeedback: >-
             arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RW-ExamplePYTHONLambdaFeedb-97c8e8seuo8v
           QNANumberNoConfirm: 'LexV2::YJBNRXBGY7/YH7DXJHECH/en_US'
           LAMBDA_DEFAULT_QUERY: QnABot-ESQueryLambda-1tmvDaOv5QtG
           QNADate: 'LexV2::9QKA7EIAUJ/94VYLOEITM/en_US'
-          ExamplePYTHONLambdaBotBroker: >-
-            arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RW-ExamplePYTHONLambdaBotBr-iOAaqrI1tL5v
           QNAPhoneNumber: 'LexV2::6XI0I5CPEF/VI6XWABPR2/en_US'
-          ES_SERVICE_PROXY: QnABot-ESProxyLambda-Jd5EREpKJTZg
           QNAAge: 'LexV2::3EBN6OEWPE/TFE1PBNL6Y/en_US'
           QNAEmailAddress: 'LexV2::99ZORPSEET/6EVHOL27AC/en_US'
-          DYNAMODB_USERSTABLE: QnABot-UsersTable-LFYZ44M5JAP7
           ExampleJSLambdahook: >-
             arn:aws:lambda:us-west-2:111365482541:function:QnABot-ExamplesStack-87RWY4QGF-ExampleJSLambdahook-yqiO55ZtaKQ4
           EXTCreateRecentTopicsResponse: >-
@@ -70,8 +57,3 @@ Resources:
       Tags:
         Type: Fulfillment
         'lambda:createdBy': SAM
-      Layers:
-        - 'arn:aws:lambda:us-west-2:111365482541:layer:AwsSdk-9MSE6hOobv7c:1'
-        - >-
-          arn:aws:lambda:us-west-2:111365482541:layer:CommonModules-9MSE6hOobv7c:1
-        - 'arn:aws:lambda:us-west-2:111365482541:layer:EsProxy-9MSE6hOobv7c:1'

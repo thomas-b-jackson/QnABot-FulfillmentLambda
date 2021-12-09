@@ -11,11 +11,17 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1045.0",
+    "bodybuilder": "^2.4.0",
+    "handlebars": "^4.7.7",
+    "intercept-stdout": "^0.1.2",
     "jsonschema": "^1.2.2",
     "jsonwebtoken": "^8.3.0",
     "jwks-rsa-promisified": "^1.0.2",
+    "linkifyjs": "^3.0.4",
     "lodash": "^4.17.21",
     "nodeunit": "^0.11.3",
+    "safe-eval": "^0.4.1",
+    "simple-encryptor": "^4.0.0",
     "slackify-markdown": "4.1.0",
     "utf8": "3.0.0"
   }
